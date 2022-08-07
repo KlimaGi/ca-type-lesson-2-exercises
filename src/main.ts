@@ -17,7 +17,7 @@ console.log('sortedByPrice', sortedByPrice);
 }
 console.groupEnd();
 
-console.groupCollapsed('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
+console.group('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
 {
   // type ItemObj = {
   //   [key: string]: number,
@@ -47,7 +47,7 @@ console.groupCollapsed('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
 type Item = {
   [key: string] : number,
 }
-type AddItem = (obj: Item, str: string, numb: number) => object;
+type AddItem = (obj: Item, str: string, numb: number) => Item;
 
   const addName: AddItem = (obj, str, number) => {
      obj[str] = number;
