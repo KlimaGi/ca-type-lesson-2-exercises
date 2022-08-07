@@ -14,13 +14,13 @@ console.group('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
 {
 }
 {
-    const addName = (obj, str, number) => {
-        obj[str] = number;
-        return obj;
-    };
-    console.log('addName({}, "Brutus", 300)', addName({}, "Brutus", 300));
-    console.log('addName({ piano: 500 }, "Brutus", 400)', addName({ piano: 500 }, "Brutus", 400));
-    console.log('addName({ piano: 500, stereo: 300 }, "Caligula", 440)', addName({ piano: 500, stereo: 300 }, "Caligula", 440));
+    const addName = (obj, str, number) => ({
+        ...obj,
+        [str]: number,
+    });
+    console.log('addName({}, "Brutus", 300)', addName({}, 'Brutus', 300));
+    console.log('addName({ piano: 500 }, "Brutus", 400)', addName({ piano: 500 }, 'Brutus', 400));
+    console.log('addName({ piano: 500, stereo: 300 }, "Caligula", 440)', addName({ piano: 500, stereo: 300 }, 'Caligula', 440));
 }
 console.groupEnd();
 //# sourceMappingURL=main.js.map
